@@ -232,4 +232,24 @@ footer {
     background-color: #e2e8f0;
     color: #1e3a8a;
   }
+  .profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem auto;
+    display: block;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border: 4px solid white;
+  }
+  
+  /* Dark mode border fix */
+  .dark-mode .profile-img {
+    border-color: #1e293b;
+  }
+  .profile-img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px #93c5fd;
+  }
   
