@@ -9,3 +9,8 @@ function type() {
   }
 }
 window.onload = type;
+
+// Dark mode toggle
+document.getElementById("toggle-theme").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});

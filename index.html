@@ -1,108 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Varshini Bhavanam Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="hero">
     <h1>Varshini Bhavanam</h1>
-    <p>Creative Developer & Tech Enthusiast</p>
+    <p>Empowering people through code & creativity.</p>
     <div class="links">
-      <a href="mailto:bhava008@d.umn.edu">Email</a>
-      <a href="https://github.com/varsha698" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/varshini-bhavanam-559b76339" target="_blank">LinkedIn</a>
+      <a href="mailto:bhava008@d.umn.edu">📧 Email</a>
+      <a href="https://linkedin.com/in/varshini-bhavanam-559b76339" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/varsha698" target="_blank">💻 GitHub</a>
+      <a href="BhavanamVarshini_Resume.pdf" target="_blank">📄 Resume</a>
     </div>
   </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>I’m a Computer Science student at the University of Minnesota - Duluth, passionate about building impactful software. With hands-on experience in mobile and full-stack development, I’m exploring innovative tech to solve real-world problems.</p>
+  <button id="toggle-theme">Toggle Mode</button>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I’m a Computer Science student at UMD who’s passionate about mobile app dev, UX, and using tech to solve real-world problems. Currently working on a food access app & mental wellness research.</p>
   </section>
 
-  <section id="experience">
+  <section>
+    <h2>Education</h2>
+    <p><strong>UMD</strong><br/>B.S. in Computer Science (Expected Dec 2025)</p>
+    <p><em>Courses:</em> Security, OS, NLP, Mobile UX, Software Design, Engineering Stats</p>
+  </section>
+
+  <section class="job">
     <h2>Experience</h2>
-    <div class="job">
-      <h3>Healthcare Software Data Abstractor</h3>
-      <p><strong>St.Lukes Aspirus Administration, Duluth, MN — Feb 2025 – Present</strong></p>
-      <ul>
-        <li>Migrated patient data from Meditech to Epic.</li>
-        <li>Validated and input structured clinical data, ensuring HIPAA compliance.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Undergraduate Research Assistant</h3>
-      <p><strong>University of Minnesota Duluth — Sep 2024 – Present</strong></p>
-      <ul>
-        <li>Building a gamified mental well-being app.</li>
-        <li>Conducting research and user testing on student stressors.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Intern</h3>
-      <p><strong>International Student Services — Aug 2024 – Present</strong></p>
-      <ul>
-        <li>Maintained student records and supported orientation.</li>
-      </ul>
-    </div>
+    <h3>Healthcare Software Data Abstractor – St.Lukes Aspirus</h3>
+    <p>✔ Migrated and validated clinical data securely in Epic.</p>
+
+    <h3>Research Assistant – University of Minnesota</h3>
+    <p>✔ Developed a gamified mobile app for mental health awareness.</p>
+
+    <h3>Intern – International Student Services</h3>
+    <p>✔ Managed confidential records and supported new students.</p>
   </section>
 
-  <section id="projects">
+  <section class="project">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>StyleSync</h3>
-      <p>A full-stack fashion platform with AI recommendations and AR try-ons. Built using React, Node.js, and MongoDB.</p>
-    </div>
-    <div class="project">
-      <h3>PantryPal</h3>
-      <p>Mobile app to assist low-income families with meal planning. Includes ML-based suggestions and secure authentication.</p>
-    </div>
+    <h3>🧥 StyleSync</h3>
+    <p>AI-powered fashion collaboration app with AR try-ons and Firebase Auth.</p>
+
+    <h3>🥘 PantryPal</h3>
+    <p>Helps low-income families plan meals with ML-based food suggestions and budgeting.</p>
   </section>
 
-  <section id="skills">
+  <section>
     <h2>Skills</h2>
-    <p><strong>Languages:</strong> Java, JavaScript, Python, HTML, CSS, SQL, C++</p>
-    <p><strong>Frameworks:</strong> React, Flutter, Node.js</p>
-    <p><strong>Tools:</strong> Git, GitHub, Linux, VS Code, IntelliJ, Figma</p>
-    <p><strong>Libraries:</strong> MongoDB, Firebase, TensorFlow, WebAR</p>
+    <p><strong>Languages:</strong> Java, Python, JS, C++, HTML/CSS</p>
+    <p><strong>Frameworks:</strong> React, Node.js, Flutter</p>
+    <p><strong>Tools:</strong> Git, Linux, Figma, Firebase, TensorFlow</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Varshini Bhavanam</p>
   </footer>
 
-  <button id="toggle-theme">Toggle Dark Mode</button>
-
-<script>
-  // Smooth scroll (if you use #links)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Dark mode toggle
-  const toggleBtn = document.getElementById('toggle-theme');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-
-  // Fade-in animation
-  const fadeElems = document.querySelectorAll('section, .job, .project');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  fadeElems.forEach(el => observer.observe(el));
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
