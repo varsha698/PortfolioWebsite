@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Varshini Bhavanam Portfolio</title>
+  <title>Varshini Bhavanam | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -12,7 +12,8 @@
   <header class="hero">
     <img src="profile.jpg" alt="Varshini Bhavanam" class="profile-pic" />
     <h1>Varshini Bhavanam</h1>
-    <p id="typing-text"></p>
+    <p><span id="typing-text"></span><span class="cursor">|</span></p>
+
     <div class="links">
       <a href="mailto:bhava008@d.umn.edu"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://linkedin.com/in/varshini-bhavanam-559b76339" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -23,69 +24,86 @@
 
   <button id="toggle-theme">Toggle Mode</button>
 
-  <section class="centered-section">
-    <h2>About Me</h2>
-    <p>I’m a Computer Science student at UMD who’s passionate about mobile app dev, UX, and using tech to solve real-world problems. Currently working on a food access app & mental wellness research.</p>
-  </section>
+  <main>
+    <section class="glass-section">
+      <h2>About Me</h2>
+      <p>I’m a Computer Science student at UMD who’s passionate about mobile app dev, UX, and using tech to solve real-world problems. Currently working on a food access app & mental wellness research.</p>
+    </section>
 
-  <section class="centered-section">
-    <h2>Education</h2>
-    <p><strong>UMD</strong><br/>B.S. in Computer Science (Expected Dec 2025)</p>
-    <p><em>Courses:</em> Security, OS, NLP, Mobile UX, Software Design, Engineering Stats</p>
-  </section>
+    <section class="glass-section">
+      <h2>Education</h2>
+      <p><strong>UMD</strong><br/>B.S. in Computer Science (Expected Dec 2025)</p>
+      <p><em>Courses:</em> Security, OS, NLP, Mobile UX, Software Design, Engineering Stats</p>
+    </section>
 
-  <section class="centered-section">
-    <h2>Experience</h2>
+    <section class="glass-section">
+      <h2>Experience</h2>
+      <div class="experience-entry">
+        <h3>Healthcare Software Data Abstractor – St.Lukes Aspirus</h3>
+        <ul>
+          <li>Migrated and validated clinical data securely in Epic.</li>
+        </ul>
+      </div>
+      <div class="experience-entry">
+        <h3>Research Assistant – University of Minnesota</h3>
+        <ul>
+          <li>Developed a gamified mobile app for mental health awareness.</li>
+        </ul>
+      </div>
+      <div class="experience-entry">
+        <h3>Intern – International Student Services</h3>
+        <ul>
+          <li>Managed confidential records and supported new students.</li>
+        </ul>
+      </div>
+    </section>
 
-    <div class="experience-entry">
-      <h3>Healthcare Software Data Abstractor – St.Lukes Aspirus</h3>
-      <ul>
-        <li>Migrated and validated clinical data securely in Epic.</li>
+    <section class="glass-section">
+      <h2>Projects</h2>
+      <div class="project-entry">
+        <h3>🧥 StyleSync</h3>
+        <p>AI-powered fashion collaboration app with AR try-ons and Firebase Auth.</p>
+      </div>
+      <div class="project-entry">
+        <h3>🥘 PantryPal</h3>
+        <p>Helps low-income families plan meals with ML-based food suggestions and budgeting.</p>
+      </div>
+    </section>
+
+    <section class="glass-section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> Java, Python, JavaScript, C++, HTML/CSS</li>
+        <li><strong>Frameworks:</strong> React, Flutter, Node.js</li>
+        <li><strong>Tools:</strong> Git, Linux, Figma, Firebase, TensorFlow</li>
       </ul>
-    </div>
-
-    <div class="experience-entry">
-      <h3>Research Assistant – University of Minnesota</h3>
-      <ul>
-        <li>Developed a gamified mobile app for mental health awareness.</li>
-      </ul>
-    </div>
-
-    <div class="experience-entry">
-      <h3>Intern – International Student Services</h3>
-      <ul>
-        <li>Managed confidential records and supported new students.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="centered-section">
-    <h2>Projects</h2>
-
-    <div class="project-entry">
-      <h3>🧥 StyleSync</h3>
-      <p>AI-powered fashion collaboration app with AR try-ons and Firebase Auth.</p>
-    </div>
-
-    <div class="project-entry">
-      <h3>🥘 PantryPal</h3>
-      <p>Helps low-income families plan meals with ML-based food suggestions and budgeting.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Languages:</strong> Java, Python, JS, C++, HTML/CSS</li>
-      <li><strong>Frameworks:</strong> React, Node.js, Flutter</li>
-      <li><strong>Tools:</strong> Git, Linux, Figma, Firebase, TensorFlow</li>
-    </ul>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Varshini Bhavanam</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Theme toggle
+    document.getElementById("toggle-theme").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    // Typing animation
+    const typingText = document.getElementById("typing-text");
+    const text = "Turning code into impact ✨";
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typingText.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 80);
+      }
+    }
+
+    window.onload = type;
+  </script>
 </body>
 </html>
