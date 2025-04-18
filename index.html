@@ -8,98 +8,104 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <header class="hero">
     <h1>Varshini Bhavanam</h1>
-    <img src="profile.jpg" alt="Varshini Bhavanam" class="profile-img" />
-    <p><span id="typing-text"></span><span class="cursor">|</span></p>
-    
+    <div class="profile-wrapper">
+      <div class="profile-ring">
+        <img src="profile.jpg" alt="Varshini Bhavanam" class="profile-img floating" />
+      </div>
+      <p class="subtitle"><span id="typing-text"></span><span class="cursor">|</span></p>
+    </div>
+
     <div class="links">
       <a href="mailto:bhava008@d.umn.edu"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://linkedin.com/in/varshini-bhavanam-559b76339" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a href="https://github.com/varsha698" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="resume.pdf" id="resume-link" download><i class="fas fa-file-arrow-down"></i> Download Resume</a>
+      <a href="resume.pdf" id="resume-link" download><i class="fas fa-file-arrow-down"></i> Resume</a>
     </div>
 
-    <button id="toggle-dark">Toggle Dark Mode</button>
+    <button id="toggle-dark">🌙 Toggle Mode</button>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I’m Varshini, a Computer Science student at UMD passionate about mobile app development, user-centered design, and using technology to solve real-world problems. I’m currently developing a food access app and conducting research on mental wellness.</p>
-  </section>
+  <main>
+    <section id="about" class="glass-card">
+      <h2>About Me</h2>
+      <p>I’m a Computer Science student at UMD who’s passionate about mobile app dev, UX, and using tech to solve real-world problems. Currently working on a food access app & mental wellness research.</p>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>University of Minnesota Duluth</strong><br>Bachelor of Science in Computer Science (Expected Dec 2025)</p>
-    <p><em>Relevant Courses:</em> Computer Security, Operating Systems, NLP, Mobile UX, Software Design, Engineering Stats</p>
-  </section>
+    <section id="education" class="glass-card">
+      <h2>Education</h2>
+      <p><strong>UMD</strong><br>B.S. in Computer Science (Expected Dec 2025)</p>
+      <p><em>Courses:</em> Security, OS, NLP, Mobile UX, Software Design, Engineering Stats</p>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="item">
-      <h3>Healthcare Software Data Abstractor</h3>
-      <p>St. Lukes Aspirus | Feb 2025 – Present</p>
-      <ul>
-        <li>Managed patient data migration from Meditech to Epic, ensuring accuracy.</li>
-        <li>Collaborated with clinical and IT teams to optimize data pipelines and maintain HIPAA compliance.</li>
+    <section id="experience" class="glass-card">
+      <h2>Experience</h2>
+      <div class="item">
+        <h3>Healthcare Software Data Abstractor</h3>
+        <p>St. Lukes Aspirus | Feb 2025 – Present</p>
+        <ul>
+          <li>Managed Meditech to Epic migration.</li>
+          <li>Collaborated with clinical and IT teams.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Research Assistant – UMD</h3>
+        <p>Sep 2024 – Present</p>
+        <ul>
+          <li>Building gamified mental wellness app.</li>
+          <li>Ran user testing & feedback cycles.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Intern – International Student Services</h3>
+        <p>Aug 2024 – Present</p>
+        <ul>
+          <li>Handled sensitive Sunapsis records.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="glass-card">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>PantryPal App</h3>
+        <p>Food planning for low-income families using Flutter & Firebase. ML-powered recipe suggestions.</p>
+      </div>
+      <div class="project">
+        <h3>StyleSync Fashion App</h3>
+        <p>Full-stack fashion app (React + Node.js) with AR try-ons and Firebase auth.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="glass-card">
+      <h2>Technical Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> Java, Python, JS, HTML, CSS, SQL, C++</li>
+        <li><strong>Frameworks:</strong> Flutter, React, Node.js</li>
+        <li><strong>Tools:</strong> Git, Firebase, Linux, Figma, PyCharm</li>
       </ul>
-    </div>
-    <div class="item">
-      <h3>Undergraduate Research Assistant</h3>
-      <p>UMD | Sep 2024 – Present</p>
-      <ul>
-        <li>Developing a mental wellness app using gamification techniques.</li>
-        <li>Conducting UX testing and iterating based on feedback.</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3>Intern, International Student Services</h3>
-      <p>UMD | Aug 2024 – Present</p>
-      <ul>
-        <li>Supported international students and managed sensitive records in Sunapsis.</li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>PantryPal App</h3>
-      <p>Helping low-income families plan meals. Built with Flutter & Firebase, with machine learning-based suggestions and secure encrypted data storage.</p>
+    <section id="contact" class="glass-card">
+      <h2>Contact</h2>
+      <p>📧 bhava008@d.umn.edu</p>
+      <p>💼 <a href="https://linkedin.com/in/varshini-bhavanam-559b76339">LinkedIn</a></p>
+      <p>💻 <a href="https://github.com/varsha698">GitHub</a></p>
+    </section>
+
+    <div class="resume-card glass-card">
+      <p>📄 Want the full resume?</p>
+      <a href="resume.pdf" download class="resume-btn"><i class="fas fa-file-download"></i> Download Resume</a>
     </div>
-    <div class="project">
-      <h3>StyleSync Fashion App</h3>
-      <p>React + Node.js full-stack app with AI outfit recommendations and AR try-ons. Built authentication with Firebase and real-time user matching.</p>
-    </div>
-  </section>
+  </main>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Languages:</strong> Java, JavaScript, Python, HTML, CSS, SQL, C++</li>
-      <li><strong>Frameworks:</strong> React, Flutter, Node.js</li>
-      <li><strong>Tools:</strong> Git, Linux, Figma, IntelliJ, PyCharm, Firebase, MongoDB</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>📧 bhava008@d.umn.edu</p>
-    <p>💼 <a href="https://linkedin.com/in/varshini-bhavanam-559b76339">LinkedIn</a></p>
-    <p>💻 <a href="https://github.com/varsha698">GitHub</a></p>
-  </section>
-
-  <!-- Resume Highlight Card -->
-  <div class="resume-card">
-    <p>📄 Want to check out my full resume?</p>
-    <a href="resume.pdf" download class="resume-btn"><i class="fas fa-file-download"></i> Download Resume</a>
-  </div>
-
-  <!-- Scroll to Top -->
-  <button id="scrollTopBtn" title="Go to top">↑</button>
+  <button id="scrollTopBtn" title="Scroll to top">↑</button>
 
   <footer>
-    <p>© 2025 Varshini Bhavanam | All Rights Reserved</p>
+    <p>© 2025 Varshini Bhavanam</p>
   </footer>
 
   <script src="script.js"></script>

@@ -1,187 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f9fafb;
-  color: #1e293b;
-  line-height: 1.7;
-  padding-bottom: 4rem;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(135deg, #1e3a8a, #0f172a);
-  top: 0;
-  left: 0;
-}
-
-header.hero {
-  color: white;
-  padding: 4rem 1rem 3rem;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.6rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 1.2rem;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.links a {
-  background-color: white;
-  color: #1e3a8a;
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s ease;
 }
-.links a:hover {
-  background-color: #dbeafe;
-  transform: translateY(-2px);
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
 }
 
-#toggle-dark {
-  background-color: transparent;
-  color: #cbd5e1;
-  border: 1px solid #cbd5e1;
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: 0.3s ease;
-}
-#toggle-dark:hover {
-  background-color: #334155;
-}
-
-.profile-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.profile-ring {
-  background: linear-gradient(135deg, #60a5fa, #9333ea);
-  padding: 5px;
-  border-radius: 50%;
-  box-shadow: 0 0 30px rgba(96, 165, 250, 0.4);
-  transition: transform 0.3s ease;
-}
-
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  border: 4px solid white;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.profile-ring:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(147, 51, 234, 0.5);
-}
-
-.floating {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: #e0e7ff;
-  margin-top: 0.8rem;
-}
-
-.cursor {
+/* Resume button */
+.resume-btn {
   display: inline-block;
-  width: 1px;
-  background-color: white;
-  margin-left: 2px;
-  animation: blink 1s infinite;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.resume-btn:hover {
+  background-color: #2563eb;
 }
 
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
-}
-
-/* Dark Mode */
-.dark-mode {
-  background-color: #0f172a;
-  color: #e2e8f0;
-}
-.dark-mode section {
-  background-color: #1e293b;
-  color: #e2e8f0;
-}
-.dark-mode header.hero {
-  background-color: transparent;
-}
-.dark-mode .links a {
-  background-color: #334155;
-  color: #e2e8f0;
-}
-.dark-mode #toggle-dark {
-  border-color: #e2e8f0;
-  color: #e2e8f0;
-}
-.dark-mode footer {
-  color: #94a3b8;
-}
-.dark-mode .profile-ring {
-  background: linear-gradient(135deg, #60a5fa, #9333ea);
-  box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
-}
-.dark-mode .profile-img {
-  border-color: #1e293b;
-}
-.profile-img {
-  width: 160px;
-  height: 160px;
+/* Scroll Top */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  background: #1e3a8a;
+  color: white;
+  border: none;
   border-radius: 50%;
-  object-fit: cover;
-  margin: 1rem auto;
-  display: block;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  border: 4px solid white;
-}
-
-/* Dark mode border fix */
-.dark-mode .profile-img {
-  border-color: #1e293b;
+  font-size: 1.4rem;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
