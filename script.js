@@ -1,32 +1,22 @@
-// Typing effect
-const text = "Turning ideas into impact with code.";
-let index = 0;
-const typingElement = document.getElementById("typing-text");
-
-function typeText() {
-  if (index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeText, 60);
-  }
-}
-window.onload = typeText;
-
-// Dark mode toggle
-const toggleDark = document.getElementById("toggle-dark");
-toggleDark.addEventListener("click", () => {
+// Toggle dark mode
+const toggleBtn = document.getElementById("toggle-dark");
+toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
 
-// Reveal animations for sections
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-}, { threshold: 0.1 });
+// Scroll to top button
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-document.querySelectorAll("section").forEach(section => {
-  observer.observe(section);
+window.onscroll = () => {
+  scrollBtn.style.display = (window.scrollY > 300) ? "block" : "none";
+};
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Alert on resume download
+const resumeLink = document.getElementById("resume-link");
+resumeLink.addEventListener("click", () => {
+  alert("Thanks for downloading my resume!");
 });
