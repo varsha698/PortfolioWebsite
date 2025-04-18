@@ -8,22 +8,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div id="particles-js"></div>
-
   <header class="hero">
     <h1>Varshini Bhavanam</h1>
-    <div class="profile-wrapper">
-      <div class="profile-ring">
-        <img src="profile.jpg" alt="Varshini Bhavanam" class="profile-img floating" />
-      </div>
-      <p class="subtitle">CS major passionate about building meaningful tech experiences.</p>
-    </div>
+    <img src="profile.jpg" alt="Varshini Bhavanam" class="profile-img" />
     <p><span id="typing-text"></span><span class="cursor">|</span></p>
-
+    
     <div class="links">
-      <a href="#featured-projects"><i class="fas fa-star"></i> Projects</a>
-      <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-      <a href="#fun-facts"><i class="fas fa-smile"></i> Fun Facts</a>
       <a href="mailto:bhava008@d.umn.edu"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://linkedin.com/in/varshini-bhavanam-559b76339" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a href="https://github.com/varsha698" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -33,108 +23,85 @@
     <button id="toggle-dark">Toggle Dark Mode</button>
   </header>
 
-  <main>
-    <!-- Featured Projects Section -->
-    <section id="featured-projects">
-      <h2>🌟 Featured Projects</h2>
-      <div class="project-card">
-        <h3>PantryPal</h3>
-        <p>Mobile app that assists low-income families with meal planning and food assistance. Built with Flutter and Firebase, includes encrypted storage and ML-powered meal suggestions.</p>
-        <span class="tech">Flutter</span>
-        <span class="tech">Firebase</span>
-        <span class="tech">Machine Learning</span>
-        <span class="tech">Data Security</span>
-      </div>
-      <div class="project-card">
-        <h3>StyleSync</h3>
-        <p>Full-stack fashion app with AI-powered outfit recommendations, AR try-ons, and user matching for events. Includes Firebase Auth and MongoDB-backed system.</p>
-        <span class="tech">React</span>
-        <span class="tech">Node.js</span>
-        <span class="tech">MongoDB</span>
-        <span class="tech">Firebase</span>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I’m Varshini, a Computer Science student at UMD passionate about mobile app development, user-centered design, and using technology to solve real-world problems. I’m currently developing a food access app and conducting research on mental wellness.</p>
+  </section>
 
-<!-- Technical Skills Section -->
-<section id="technical-skills">
-  <h2>🛠️ Technical Skills</h2>
-  <div class="skills-grid">
-    <div><strong>Languages:</strong> Java, JavaScript, Python, HTML, CSS, SQL, C++</div>
-    <div><strong>Frameworks:</strong> React, Flutter, Node.js</div>
-    <div><strong>Developer Tools:</strong> Git, GitHub, Linux, VS Code, IntelliJ, PyCharm, Figma, Microsoft Office</div>
-    <div><strong>Libraries/Technologies:</strong> MongoDB, Firebase, TensorFlow, WebAR</div>
-  </div>
-</section>
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>University of Minnesota Duluth</strong><br>Bachelor of Science in Computer Science (Expected Dec 2025)</p>
+    <p><em>Relevant Courses:</em> Computer Security, Operating Systems, NLP, Mobile UX, Software Design, Engineering Stats</p>
+  </section>
 
-
-    <!-- Experience Section -->
-    <section id="experience">
-      <h2>💼 Experience</h2>
-      <div class="project-card">
-        <h3>Healthcare Software Data Abstractor</h3>
-        <p><strong>St. Lukes Aspirus Administration · Feb 2025 – Present</strong></p>
-        <ul>
-          <li>Migrated patient data from Meditech to Epic, ensuring clinical accuracy and HIPAA compliance.</li>
-          <li>Collaborated with IT teams to optimize data workflows.</li>
-        </ul>
-      </div>
-      <div class="project-card">
-        <h3>Undergraduate Research Assistant</h3>
-        <p><strong>UMD · Sep 2024 – Present</strong></p>
-        <ul>
-          <li>Building a mobile app using gamification to support student mental wellness.</li>
-          <li>Leading user testing and iterative UX design.</li>
-        </ul>
-      </div>
-      <div class="project-card">
-        <h3>Intern, International Student Services</h3>
-        <p><strong>UMD · Aug 2024 – Present</strong></p>
-        <ul>
-          <li>Maintained student records in Sunapsis and supported new student onboarding.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Fun Facts Section -->
-    <section id="fun-facts">
-      <h2>🎉 Fun Facts About Me</h2>
-      <ul class="fun-list">
-        <li>I’ve built apps that combine tech + social good 🤝</li>
-        <li>I can debug code *and* design beautiful interfaces 🎨</li>
-        <li>I love blending creativity with logic 🤖✨</li>
-        <li>I once mapped an app's UX using only sticky notes 💡</li>
-        <li>I’m obsessed with making tech feel human 🛋️</li>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <h3>Healthcare Software Data Abstractor</h3>
+      <p>St. Lukes Aspirus | Feb 2025 – Present</p>
+      <ul>
+        <li>Managed patient data migration from Meditech to Epic, ensuring accuracy.</li>
+        <li>Collaborated with clinical and IT teams to optimize data pipelines and maintain HIPAA compliance.</li>
       </ul>
-    </section>
-  </main>
+    </div>
+    <div class="item">
+      <h3>Undergraduate Research Assistant</h3>
+      <p>UMD | Sep 2024 – Present</p>
+      <ul>
+        <li>Developing a mental wellness app using gamification techniques.</li>
+        <li>Conducting UX testing and iterating based on feedback.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <h3>Intern, International Student Services</h3>
+      <p>UMD | Aug 2024 – Present</p>
+      <ul>
+        <li>Supported international students and managed sensitive records in Sunapsis.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>PantryPal App</h3>
+      <p>Helping low-income families plan meals. Built with Flutter & Firebase, with machine learning-based suggestions and secure encrypted data storage.</p>
+    </div>
+    <div class="project">
+      <h3>StyleSync Fashion App</h3>
+      <p>React + Node.js full-stack app with AI outfit recommendations and AR try-ons. Built authentication with Firebase and real-time user matching.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+      <li><strong>Languages:</strong> Java, JavaScript, Python, HTML, CSS, SQL, C++</li>
+      <li><strong>Frameworks:</strong> React, Flutter, Node.js</li>
+      <li><strong>Tools:</strong> Git, Linux, Figma, IntelliJ, PyCharm, Firebase, MongoDB</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>📧 bhava008@d.umn.edu</p>
+    <p>💼 <a href="https://linkedin.com/in/varshini-bhavanam-559b76339">LinkedIn</a></p>
+    <p>💻 <a href="https://github.com/varsha698">GitHub</a></p>
+  </section>
+
+  <!-- Resume Highlight Card -->
+  <div class="resume-card">
+    <p>📄 Want to check out my full resume?</p>
+    <a href="resume.pdf" download class="resume-btn"><i class="fas fa-file-download"></i> Download Resume</a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
 
   <footer>
     <p>© 2025 Varshini Bhavanam | All Rights Reserved</p>
   </footer>
 
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 50 },
-        "size": { "value": 3 },
-        "color": { "value": "#ffffff" },
-        "line_linked": {
-          "enable": true,
-          "opacity": 0.2
-        },
-        "move": {
-          "enable": true,
-          "speed": 0.8
-        }
-      },
-      "interactivity": {
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" }
-        }
-      }
-    });
-  </script>
 </body>
 </html>
