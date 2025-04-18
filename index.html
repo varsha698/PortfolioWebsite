@@ -9,52 +9,53 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id="particles-js"></div>
+  <div class="cursor"></div>
+
   <header class="hero">
     <img src="profile.jpg" alt="Varshini Bhavanam" class="profile-pic" />
     <h1>Varshini Bhavanam</h1>
-    <p><span id="typing-text"></span><span class="cursor">|</span></p>
-
+    <p><span id="typing-text"></span><span class="cursor-blink">|</span></p>
     <div class="links">
       <a href="mailto:bhava008@d.umn.edu"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://linkedin.com/in/varshini-bhavanam-559b76339" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a href="https://github.com/varsha698" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       <a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
     </div>
+    <div class="theme-controls">
+      <label for="theme">Theme:</label>
+      <select id="theme">
+        <option value="default">Light</option>
+        <option value="dark">Dark</option>
+        <option value="lavender">Lavender</option>
+        <option value="midnight">Midnight</option>
+      </select>
+    </div>
   </header>
-
-  <button id="toggle-theme">Toggle Mode</button>
 
   <main>
     <section class="glass-section">
       <h2>About Me</h2>
-      <p>I’m a Computer Science student at UMD who’s passionate about mobile app dev, UX, and using tech to solve real-world problems. Currently working on a food access app & mental wellness research.</p>
+      <p>Computer Science student at UMD passionate about UX, mobile dev, and solving real-world problems through tech.</p>
     </section>
 
-    <section class="glass-section">
-      <h2>Education</h2>
-      <p><strong>UMD</strong><br/>B.S. in Computer Science (Expected Dec 2025)</p>
-      <p><em>Courses:</em> Security, OS, NLP, Mobile UX, Software Design, Engineering Stats</p>
-    </section>
-
-    <section class="glass-section">
-      <h2>Experience</h2>
-      <div class="experience-entry">
-        <h3>Healthcare Software Data Abstractor – St.Lukes Aspirus</h3>
-        <ul>
-          <li>Migrated and validated clinical data securely in Epic.</li>
-        </ul>
+    <section class="glass-section timeline">
+      <h2>Timeline</h2>
+      <div class="timeline-entry">
+        <h3>🎓 B.S. in Computer Science - UMD</h3>
+        <p>Expected Dec 2025 | Courses in NLP, OS, Security, Mobile UX</p>
       </div>
-      <div class="experience-entry">
-        <h3>Research Assistant – University of Minnesota</h3>
-        <ul>
-          <li>Developed a gamified mobile app for mental health awareness.</li>
-        </ul>
+      <div class="timeline-entry">
+        <h3>🩺 Healthcare Software Data Abstractor</h3>
+        <p>St. Lukes Aspirus | Data migration into Epic systems</p>
       </div>
-      <div class="experience-entry">
-        <h3>Intern – International Student Services</h3>
-        <ul>
-          <li>Managed confidential records and supported new students.</li>
-        </ul>
+      <div class="timeline-entry">
+        <h3>🔬 Research Assistant</h3>
+        <p>UMD | Mental wellness mobile app using gamification</p>
+      </div>
+      <div class="timeline-entry">
+        <h3>🌍 Intern</h3>
+        <p>International Student Services | Record management, onboarding</p>
       </div>
     </section>
 
@@ -62,11 +63,11 @@
       <h2>Projects</h2>
       <div class="project-entry">
         <h3>🧥 StyleSync</h3>
-        <p>AI-powered fashion collaboration app with AR try-ons and Firebase Auth.</p>
+        <p>Fashion collab app with AR, Firebase auth</p>
       </div>
       <div class="project-entry">
         <h3>🥘 PantryPal</h3>
-        <p>Helps low-income families plan meals with ML-based food suggestions and budgeting.</p>
+        <p>ML-driven meal planner for food assistance</p>
       </div>
     </section>
 
@@ -78,32 +79,17 @@
         <li><strong>Tools:</strong> Git, Linux, Figma, Firebase, TensorFlow</li>
       </ul>
     </section>
+
+    <section class="glass-section" id="now-playing">
+      <h2>🎧 Now Playing</h2>
+      <p id="track-info">Fetching current jam...</p>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Varshini Bhavanam</p>
   </footer>
 
-  <script>
-    // Theme toggle
-    document.getElementById("toggle-theme").addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-
-    // Typing animation
-    const typingText = document.getElementById("typing-text");
-    const text = "Turning code into impact ✨";
-    let index = 0;
-
-    function type() {
-      if (index < text.length) {
-        typingText.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(type, 80);
-      }
-    }
-
-    window.onload = type;
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
